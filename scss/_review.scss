@@ -1,0 +1,56 @@
+/* =============================
+   Review Section Starts
+ =============================== */
+ #review{
+    padding: 5rem 0;
+    background: $light;
+    .container{
+        .heading{
+            padding: 2rem 0;
+        }
+        .user-wrapper{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.5rem;
+            .user{
+                flex: 1 1 28rem;
+                padding: 2rem;
+                text-align: center;
+                border: .1rem solid $light;
+                border-radius: 1rem;
+                box-shadow: $bs-search-form;
+                margin-top: 6rem;
+                background: $bg-light;                  
+                img{
+                    height: 12rem;
+                    width:12rem;
+                    border-radius: 50%;
+                    border: 1rem solid $light ;
+                    margin-top: -8rem;
+                    object-fit: cover;
+                }
+                h3{
+                    font-size: 2.5rem;
+                    color: $dark;
+                    margin-top: 2rem;
+                }
+                .stars{
+                    padding: 1.5rem 0; 
+                    i{
+                        font-size: 1.5rem;
+                        color: $orange;                             
+                    }                                        
+                }
+                p{
+                    font-size: 1.5rem;
+                    line-height: 1.7;
+                    color: $dark-light; 
+                    padding: 1rem 0;                  
+                }
+            }
+        }
+    }
+}
+/* =============================
+Review Section End
+=============================== */

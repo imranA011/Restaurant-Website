@@ -1,0 +1,66 @@
+ /* =============================
+  About Section Starts Here
+ =============================== */
+ #about{
+    padding: 5rem 0;
+    background: $bg-light;
+    .container{
+        .about-wrapper{    
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 2rem;
+            .about-image{      
+                flex: 1 1 37.5rem;
+                img{
+                    width: 100%; 
+                }
+            }
+            .about-content{
+                flex: 1 1 37.5rem;
+                span{
+                    display: block;
+                    padding-bottom: 1rem;
+                    font-size: 2rem;
+                    color: $orange;
+                    text-transform: uppercase;
+                }
+                h3.title{
+                    font-size: 4rem;
+                    color: $dark;
+                    padding-bottom: 2rem;
+                }
+                p{
+                    font-size: 1.4rem;
+                    color: $dark-light;
+                    line-height: 2;
+                }                    
+                .icon-container{
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    gap: 1rem;
+                    margin-top: 3rem;
+                   .icons{
+                       flex: 1 1 20rem;
+                       border:1rem solid $light;
+                       border-radius: .5rem;
+                       display: flex;
+                       align-items: center;
+                       gap:2rem;
+                       padding:1rem;
+                       img{
+                           height:4rem;
+                       }
+                       h3{
+                           font-size: 1.8rem;
+                       }
+                   }
+                }
+            }
+        }
+    }
+}
+/* =============================
+About Section End
+=============================== */

@@ -1,0 +1,235 @@
+/* =============================
+    Basic Styles
+=============================== */
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Lobster&family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,700;1,400&display=swap');
+   
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+    $orange:orange;
+    $orange-light:rgba(255, 166, 0, 0.7);
+    $dark:rgb(0, 0, 0);
+    $dark-light:rgba(0, 0, 0, 0.8);
+    $light:#fff;
+    $bg-light:#ddd;
+    $bs-header: 0 1rem 2rem rgba(255, 255, 255, 0.8);
+    $bs-search-form: 0 1rem 2.5rem rgba(0, 0, 0, 0.2);
+    $bs-category: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+    $border-bottom: 1px solid $orange-light;
+
+    @mixin grid($val) {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+        gap: 1.5rem;
+    }
+
+    @mixin font($val){
+        font-family: 'Poppins', sans-serif;
+        font-size: ($val);
+    }
+   
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+body {
+    line-height: 1.3;
+    background: $light;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Lobster', cursive;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+.container{
+    padding: 0 5%;
+}
+.container-fluid{
+    padding: 0 ;
+}
+.heading{
+    text-align: center;
+    margin-bottom: 2rem;
+    span{
+        @include font(2rem);
+        color: $orange;
+    }
+    h3{
+        font-size: 4rem;
+        color: $dark;
+    }
+}
+.btn{
+    display: inline-block;
+    padding: 1rem 2.2rem;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    border-radius: .2rem;
+    background: $orange;
+    color: $dark;
+    transition: all .5s ease-in-out;
+    &:hover{
+        color: $orange;
+        background: $dark;
+    }
+}
+/* =============================
+    Basic Styles End
+=============================== */
+/* =============================
+    Custom Styles Start Here
+=============================== */
+    .page-wrapper{
+        max-width: 1440px;
+        margin: 0 auto;
+        background: $bg-light;
+
+        @import "header";  
+        @import "hero";
+        @import "category";
+        @import "about";
+        @import "dishes";
+        @import "banner";
+        @import "review";
+        @import "order";
+        @import "blog";
+        @import "footer";
+    
+    }
+
+    /* ===============================
+        Responsive Design for Laptop 
+    =============================== */
+
+@media screen and (max-width:992px){
+    html{
+        font-size: 55%;
+    }
+    .page-wrapper{
+        /* =============================
+            Header Starts
+        =============================== */
+        header{
+            .container{
+                .nav-menu{
+                    #menu-toggle-btn{
+                        position: absolute;
+                        right: 5%;
+                        display: flex;
+                        i{
+                            font-size: 2rem;
+                            border: 2px solid $dark-light;
+                            border-radius: .2rem;
+                            padding: .5rem;
+                        }                      
+                    }               
+                    .primary-menu{
+                        display: none;           
+                        ul{
+                            display: block;
+                            flex-direction: column;
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            top: 100%;
+                            text-align: center;                           
+                            li{ 
+                                margin-left: 0;
+                                border-bottom: $border-bottom;
+                                a{
+                                    padding:1rem 0;
+                                    background: $orange;
+                                    &:hover{
+                                       background:$orange-light ; 
+                                    }
+                                }
+                            }                          
+                        }
+                        &.active{
+                            display: flex;                         
+                        }
+                    }
+                    .navbar-icons{
+                        margin-right:5rem;
+                    }
+                }                                                                                                 
+            }
+        }        
+    }
+}
+@media screen and (max-width:768px){   
+    .page-wrapper{
+        /* =============================
+            Header Starts
+        =============================== */
+        header{
+            .container{
+                .nav-menu{                                                                        
+                    #logo{
+                        font-size: 3rem;
+                    }                                 
+                    #search-form{      
+                        width: 100%;
+                        right: 0;                   
+                    }                                                                             
+                }
+            }        
+        }
+        #hero{
+            .hero-parallax-image{
+                top:-5rem!important;
+                right:-5rem!important;
+                width: 150%!important;
+            } 
+        }
+        #order{
+            .container{
+                .order-form-wrapper{
+                    form{
+                        .input-box{
+                            .input{
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            } 
+        }      
+    }
+}
+@media screen and (max-width:480px){
+    html{
+        font-size: 50%!important;
+    }
+    #hero{
+        padding-top: 8rem!important;
+        .slide-content{
+            span{
+                font-size: 1.5rem!important;
+            }
+            h3{
+                font-size: 3rem!important;
+            }
+            p{
+                font-size: 1.5rem!important;
+            }
+        }
+        .slide-image{
+             margin: 0!important;
+        }
+    }    
+}      
+        

@@ -1,0 +1,59 @@
+ /* =============================
+  Hero Section Starts Here
+ =============================== */
+ #hero{
+    padding-top: 12rem;
+    padding-bottom: 2rem;
+    background: $light;
+    .container-fluid{        
+        .hero-slide{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap-reverse;
+            gap: 2rem;
+            position: relative;
+            overflow:hidden;
+            .slide-content{
+               flex: 1 1 42.7rem;
+               padding:0 5%;
+               span{
+                   font-size: 2rem;
+                   color: $dark-light;
+                   text-transform: uppercase;
+                   color: $orange;
+               }
+               h3{
+                   font-size: 5rem;
+                   margin-top: 1rem;
+                   color: $dark;
+                   text-transform: capitalize;                   
+               }
+               p{
+                   font-size: 1.7rem;
+                   color: $dark-light;
+                   text-transform: capitalize;
+                   margin-top: 1.5rem;
+                   line-height: 1.8;
+               }           
+           }
+           .slide-image{
+               flex: 1 1 42.7rem;
+               margin:5rem 0;
+               pointer-events:none;
+               .hero-image{
+                   width: 100%;
+                   margin-top: 5rem;
+               }              
+           }
+           .hero-parallax-image{
+               position: absolute;
+               top:-10rem;
+               right:-10rem;
+               width: 85vw;
+           }             
+        }
+    }
+}
+ /* =============================
+ Hero Section End
+=============================== */

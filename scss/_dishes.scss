@@ -1,0 +1,103 @@
+/* =============================
+  Dishes Section Starts
+ =============================== */
+ #dishes{
+    padding: 5rem 0;
+    background: $light;
+    .container{
+        .heading{
+            padding:2rem;
+        }
+        .dishes-wrapper{
+            @include grid(28rem);
+            .dishes-item{
+                position: relative;
+                overflow: hidden;
+                padding: 3rem 2rem;
+                border-radius: .5rem;
+                background: $bg-light;
+                text-align: center;
+                &:hover{
+                    .icons{
+                        right: 3rem;
+                    }
+                }              
+                .discount{
+                    position: absolute;
+                    top: 3rem;
+                    left: 3rem;
+                    display: inline-block;
+                    font-size: 1.6rem;
+                    width: 5rem;
+                    height: 5rem;
+                    line-height: 5rem;
+                    border-radius: 50%;
+                    background: $dark-light;
+                    color: $orange;
+                }
+                .icons{
+                    position: absolute;
+                    top: 3rem;
+                    right:-16rem;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                    a{
+                        display: block;
+                        font-size: 1.5rem;
+                        width: 3rem;
+                        height: 3rem;
+                        line-height: 3rem;
+                        border-radius: 50%;
+                        background: $orange;
+                        color: $dark;
+                        transition: all .3s linear;
+                        &:hover{
+                            color: $orange;
+                            background: $dark;
+                        }
+                    }                         
+                }
+                img{
+                    height: 16rem;
+                    margin: 1rem 0;
+                }
+                h3{
+                    font-size: 2.5rem;
+                }
+                .stars{
+                    font-size: 1.8rem;
+                    padding: 1rem 0;
+                    i{
+                        color: $orange;
+                    }                  
+                }
+                .price{
+                    font-size: 2rem;
+                    font-weight: 600;
+                    color: $dark;
+                    span{
+                        font-size: 1.5rem;
+                        color: $dark-light;
+                        text-decoration: line-through;
+                    }
+                }
+                .quantity{
+                    font-size: 1.3rem;
+                    margin-top: 1rem;
+                    input{
+                        display: inline-block;
+                        width: 5rem;
+                        height: 2rem;
+                        border: 1px solid $dark-light;
+                        border-radius: .1rem;
+                        padding: .5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+/* =============================
+  Dishes Section End
+ =============================== */

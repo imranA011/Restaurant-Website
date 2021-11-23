@@ -1,0 +1,280 @@
+  /* =============================
+        Header Starts
+    =============================== */
+    header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 111;
+        background: $light;
+        box-shadow: $bs-header;
+        border-bottom: $border-bottom; 
+        .container{
+            padding: 1rem 5%;
+            .nav-menu{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                #menu-toggle-btn{
+                    display: none;
+                }
+                #logo{
+                    font-family: 'Lobster', cursive;
+                    font-weight: 700;
+                    font-size: 4rem;
+                    i{
+                        color: $orange;   
+                    }
+                    span{
+                        color: $dark-light;   
+                        text-transform: capitalize;
+                    }
+                }
+                nav{
+                    margin-left: auto;
+                    font-weight: 500;
+                    ul{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        li{
+                            margin-left: .5rem; 
+                            a{
+                                display: block;
+                                padding: 1rem 2rem;
+                                font-size: 1.5rem;
+                                text-transform: uppercase;
+                                color: $dark-light;
+                                transition: all 0.3s ease-in-out;                              
+                                &.active,
+                                &:hover{
+                                background: $orange;
+                                color: $light;               
+                                }
+                                &.btn{
+                                    margin-top: 0;
+                                }                                                                        
+                            }
+                        }   
+                    }
+                }
+                .navbar-icons{
+                    display: flex;
+                    i{
+                        display: block;
+                        color: $orange;
+                        font-size: 1.5rem;   
+                        text-align: center;
+                        margin-left: .8rem;
+                        width: 3.5rem;
+                        height: 3.5rem;
+                        line-height: 3.5rem;
+                        border-radius: 50%;
+                        transition: all 0.3s ease-in-out;
+                        &:hover{
+                            color: $light;
+                            background: $orange;
+                        } 
+                    }                     
+                }
+                /* =============================
+                    Search Form Starts
+                =============================== */
+                #search-form{
+                    position: absolute;
+                    top: -110%;
+                    right: 3rem;
+                    z-index: 1111;
+                    width: 50rem;
+                    height: 6rem;
+                    border-radius: .8rem;
+                    padding: 0 1.5rem; 
+                    box-shadow: $bs-search-form;             
+                    display: flex;   
+                    align-items: center;
+                    background: $light;  
+
+                    input{
+                        background: none;
+                        text-transform: none;
+                        width:100%;
+                        height: 100%;
+                        color: $dark;
+                        font-size: 1.5rem;
+                        &::placeholder{
+                            color: $dark;
+                        }                                                
+                    }                
+                    label{
+                        cursor: pointer;
+                        margin-left: 1.5rem;
+                        color: $dark;
+                        font-size: 2rem;
+                        &:hover{
+                            color: $orange;
+                        }
+                    }
+                    &.active{
+                        top: 110%;
+                    }
+                }                         
+                /* =============================
+                    Shopping Cart Starts 
+                =============================== */
+                #shopping-cart{
+                    position: absolute;
+                    top: 2000%;
+                    right: 3rem;
+                    z-index: 1111;
+                    width: 35rem;
+                    height: auto;
+                    border-radius: .8rem;
+                    padding: 2rem;                   
+                    box-shadow: $bs-search-form;                            
+                    background:$light;       
+                        h2{
+                            text-align: center;
+                            font-size: 2.5rem;
+                            padding-bottom:2rem;
+                            border-bottom: $border-bottom;
+                        }
+                        .shopping-cart-item{
+                            position: relative;
+                            display: flex;
+                            align-items: center;
+                            gap: 1.5rem;
+                            padding:.5rem;
+                            border-bottom: $border-bottom;
+                            img{
+                                height: 8rem;
+                            }
+                            .shopping-cart-item-desc{
+                                h3{
+                                    a{
+                                        font-size: 2rem;
+                                        font-weight: 100;
+                                        color: $dark-light;
+                                        &:hover{
+                                            color: $orange;
+                                        }
+                                    }                                                                              
+                                }
+                                span{
+                                    font-size: 1.3rem;
+                                    padding: .2rem;
+                                }
+                            }
+                            .fa-trash{
+                                position: absolute;
+                                top: 50%;
+                                right:1.5rem;
+                                transform: translateY(-50%);
+                                transition: all .3s linear;
+                                font-size: 1.5rem;
+                                color: $dark-light;
+                                &:hover{
+                                    color: $orange; 
+                                }
+                            }                       
+                    }
+                    .shopping-cart-action{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-top: 1.5rem;
+                        span{                          
+                            font-size: 2rem;
+                            font-weight: 700;
+                        }
+                        a{                           
+                            padding: 1rem 2rem;
+                            color: $light;
+                            background: $orange;
+                            border-radius: .5rem;
+                            font-size: 1.5rem;
+                            text-transform: uppercase;
+                            transition: all .5s ease-in-out;
+                            &:hover{
+                                color: $dark;
+                                background: $bg-light;
+                            }
+                        } 
+                    } 
+                    &.active{
+                        top: 110%;
+                    }                  
+                }
+                /* =============================
+                    User Profile Starts 
+                =============================== */
+                #login-form{
+                    position: absolute;
+                    top: -2000%;
+                    right: 3rem;
+                    z-index: 1111;
+                    width: 35rem;
+                    height: auto;
+                    border-radius: .8rem;
+                    padding:3rem 2rem;                   
+                    box-shadow: $bs-search-form;                            
+                    background: $light; 
+                    h3{
+                        font-size: 3rem;
+                        text-align: center;
+                        margin-bottom: 3rem;
+                    }
+                    .box{
+                        margin: 1rem 0;
+                        padding: 1.2rem;
+                        border: 1px solid $dark-light;
+                        border-radius: .5rem;
+                        font-size: 1.5rem;
+                        text-transform: none;
+                        width: 100%;                      
+                    }
+                    .remember{
+                        display: flex;
+                        align-items: center;
+                        gap: .8rem;
+                        margin: 1rem 0;
+                        label{
+                            font-size: 1.3rem;
+                            text-transform: capitalize;
+                            color: $dark-light;
+                            cursor: pointer;
+                        }
+                    }
+                    .login-btn{                      
+                        padding:1rem 2rem;
+                        margin: 2rem 0;
+                        width: 100%;
+                        font-size: 1.5rem;
+                        text-align: center;
+                        cursor: pointer;
+                        text-transform: uppercase;
+                        transition: all .5s ease-in-out;
+                        background: $orange;
+                        &:hover{
+                            color: $dark;
+                            background: $orange-light;
+                        }                       
+                    }
+                    p{
+                        padding-top:0.8rem;
+                        font-size: 1.3rem;
+                        a{
+                            color: $orange;
+                            &:hover{
+                                color: $orange-light;
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                    &.active{
+                        top: 110%;
+                    } 
+                }               
+            }   
+        }
+    } 

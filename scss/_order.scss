@@ -1,0 +1,61 @@
+/* =============================
+   Order Section Starts
+ =============================== */
+ #order{
+    padding: 5rem 0;
+    background: $bg-light;
+    .container{
+        .heading{
+            padding: 2rem 0;
+        }
+        .contact-wrapper{
+            @include grid(28rem);   
+            text-align: center;   
+            .contact-info{               
+                border-radius: .5rem;
+                padding: 3rem;
+                background: $light;
+                img{
+                    height: 10rem;
+                }
+                h3{
+                    font-size: 2.2rem;
+                }
+            }               
+        }
+        .order-form-wrapper{
+            margin-top: 2rem;
+            form{
+                padding: 2rem 0;              
+                margin: 0 auto;
+                .input-box{
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    .input{
+                        margin-bottom: 1rem; 
+                        width: 49%; color: $orange;                     
+                        input,
+                        textarea,
+                        select{
+                            padding: 1rem;
+                            width: 100%;
+                            font-size: 1.5rem;
+                            border-radius: .5rem;                                                            
+                        }                       
+                        input,
+                        select{
+                            height: 5rem;
+                        }
+                        textarea{                        
+                            height: 10rem;                            
+                        }
+                    }
+                }    
+            }
+        }
+    }
+}
+/* =============================
+Order Section End
+=============================== */

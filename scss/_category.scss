@@ -1,0 +1,33 @@
+ /* =============================
+  Category Section Starts Here
+ =============================== */
+ #category{
+    padding: 5rem 0;
+    background: $orange-light;
+    .container{
+        .category-wrapper{
+            @include grid(16rem);
+            .category-item{
+                padding: 2rem;
+                text-align: center;
+                border-radius: .5rem;
+                box-shadow: $bs-category ;
+                background: $bg-light;
+                transition: all.3s linear ;
+                &:hover{
+                    background: $light;
+                }
+                img{
+                    height:8rem;
+                }
+                h3{
+                    font-size: 2rem;
+                    color: $dark-light;
+                }                   
+            }        
+        }
+    }
+}
+/* =============================
+Category Section End
+=============================== */

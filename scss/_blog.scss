@@ -1,0 +1,40 @@
+/* =============================
+   Blog Section Starts
+ =============================== */
+
+ #blog{
+    padding: 8rem 0;
+    background: $light;
+    .container{
+        .heading{
+            margin-bottom: 3rem;
+        }
+        .blog-wrapper{
+            @include grid(28rem);
+            .card{
+                img{
+                    width: 100%;
+                }
+                .card-body{
+                    padding:0 1rem ;
+                    p{
+                        font-size: 1.5rem;
+                        line-height: 2;
+                        padding: 1.5rem 0;
+                    }
+                    h3{
+                        font-size: 2rem;
+                        color: $orange;
+                    }
+                }
+                .card-footer{
+                    padding:0 1rem;
+                }
+            }
+        }
+    }
+}
+
+/* =============================
+Blog Section End
+=============================== */
